@@ -1,0 +1,4 @@
+# device/intel/sepolicy/ widevine/gen/gen_common/file_contexts
+
+/(vendor|system/vendor)/bin/hw/android.hardware.drm@1.3-service-lazy.widevine    u:object_r:hal_drm_default_exec:s0
+/data/vendor/mediadrm(/.*)?    u:object_r:mediadrm_vendor_data_file:s0
