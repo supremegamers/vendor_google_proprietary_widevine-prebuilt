@@ -1,0 +1,13 @@
+# device/intel/sepolicy/ widevine/gen/gen_common/hal_drm_widevine.te
+
+vndbinder_use(hal_drm_default)
+
+allow hal_drm_default mediadrm_vendor_data_file:dir create_dir_perms;
+
+allow hal_drm_default mediadrm_vendor_data_file:file create_file_perms;
+
+allow hal_drm_default gpu_device:dir search;
+
+allow hal_drm_default gpu_device:chr_file rw_file_perms;
+
+allow hal_drm_default tmpfs:file { read write map};
