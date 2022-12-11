@@ -20,22 +20,37 @@ LOCAL_CHECK_ELF_FILES := false
 LOCAL_SRC_FILES_64 := prebuilts/lib64/libwvhidl.so
 include $(BUILD_PREBUILT)
 
-#include $(CLEAR_VARS)
-#LOCAL_MODULE := libwvdrmengine
-#LOCAL_MODULE_SUFFIX :=.so
-#LOCAL_MODULE_TAGS := optional
-#LOCAL_MODULE_RELATIVE_PATH := mediadrm
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_PROPRIETARY_MODULE := true
-#LOCAL_CHECK_ELF_FILES := false
-#ifdef TARGET_2ND_ARCH
-#LOCAL_MULTILIB := both
-#LOCAL_SRC_FILES_32 := prebuilts/lib/mediadrm/libwvdrmengine.so
-#LOCAL_SRC_FILES_64 := prebuilts/lib64/mediadrm/libwvdrmengine.so
-#else
-#LOCAL_SRC_FILES := prebuilts/lib/mediadrm/libwvdrmengine.so
-#endif
-#include $(BUILD_PREBUILT)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libprotobuf-cpp-full-3.9.1
+LOCAL_MODULE_SUFFIX :=.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_CHECK_ELF_FILES := false
+ifdef TARGET_2ND_ARCH
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_32 := prebuilts/lib/libprotobuf-cpp-full-3.9.1.so
+LOCAL_SRC_FILES_64 := prebuilts/lib64/libprotobuf-cpp-full-3.9.1.so
+else
+LOCAL_SRC_FILES := prebuilts/lib/libprotobuf-cpp-full-3.9.1.so
+endif
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libprotobuf-cpp-lite-3.9.1
+LOCAL_MODULE_SUFFIX :=.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_CHECK_ELF_FILES := false
+ifdef TARGET_2ND_ARCH
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_32 := prebuilts/lib/libprotobuf-cpp-lite-3.9.1.so
+LOCAL_SRC_FILES_64 := prebuilts/lib64/libprotobuf-cpp-lite-3.9.1.so
+else
+LOCAL_SRC_FILES := prebuilts/lib/libprotobuf-cpp-lite-3.9.1.so
+endif
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.drm@1.4-service-lazy.widevine
