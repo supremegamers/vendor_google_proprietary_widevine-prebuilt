@@ -1,6 +1,6 @@
 # Prebuilt Widevine DRM L3, pulled from WSA's vendor image
 
-Android image fingerprint : Windows/windows_x86_64/windows_x86_64:12/SQ3A.220705.004/2210.40000.7.0:user/release-keys
+Android image fingerprint : Windows/windows_x86_64/windows_x86_64:13/TP1A.221105.002/2211.40000.10.0:user/release-keys
 
 ## How to integrate into the Android build
 
